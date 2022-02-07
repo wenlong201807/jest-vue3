@@ -18,7 +18,7 @@ module.exports = {
     'jest-serializer-vue' // 对快照文件格式化处理方式
   ],
   testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)'
+    '**/__tests__/**/*.test.(js|jsx|ts|tsx)'
     // '**/tests/unit/**/*.(spec|test).(js|jsx|ts|tsx)|**/__tests__/**/*.(spec|test).(js|jsx|ts|tsx)'
   ],
   testPathIgnorePatterns: [
