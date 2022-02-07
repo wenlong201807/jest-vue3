@@ -1,0 +1,6 @@
+1 官网 https://archive.jestjs.io/docs/en/24.x/getting-started.html
+
+2 jest配置说明 Configuring Jest https://archive.jestjs.io/docs/en/24.x/configuration
+
+3 安装jest配置相关依赖包 https://www.npmjs.com/package/jest-serializer-vue
+npm install --save-dev jest-serializer-vue jest-transform-stub babel-jest vue-jest
