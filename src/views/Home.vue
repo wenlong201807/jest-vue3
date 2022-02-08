@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <TodoList />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import TodoList from '@/containers/TodoList/TodoList';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    TodoList
   }
 };
 </script>

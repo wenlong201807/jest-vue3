@@ -6,7 +6,6 @@ module.exports = {
     '^.+\\.vue$': 'vue-jest',
     '^.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest'// es6语法转成es5语法
-
   },
   transformIngorePatterns: [
     '/node_modules/'

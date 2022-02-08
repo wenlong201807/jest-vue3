@@ -8,3 +8,5 @@ npm install --save-dev jest-serializer-vue jest-transform-stub babel-jest vue-je
 4 vue-test-utils 官网 https://v1.test-utils.vuejs.org/
 
 5 快照测试，可以直观看见dom变化，测试时，存在dom不同，则不通过，可以按u重新生成快照
+
+6 基本jest配置文件说明 https://www.cnblogs.com/xiaomg/p/12933600.html

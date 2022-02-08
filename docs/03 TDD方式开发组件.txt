@@ -1,0 +1,8 @@
+1 问题 查找官网，https://jestjs.io/docs/configuration
+注意：node版本，jest版本，
+
+"test:unit": "vue-cli-service test:unit" 
+增加 --watch 配置参数有报错
+
+一、TDD模式
+1 先写测试用例，再开发需求组件
