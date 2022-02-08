@@ -1,7 +1,13 @@
 <template>
   <div>
     <CHeader @add="addTodoItem" />
-    <UndoList :list="undoList" @delete="handleItemDelete" />
+    <UndoList
+      :list="undoList"
+      @delete="handleItemDelete"
+      @status="changeStatus"
+      @reset="resetStatus"
+      @change="changeItemValue"
+    />
   </div>
 </template>
 
@@ -21,10 +27,31 @@ export default {
   },
   methods: {
     addTodoItem (inputValue) {
-      this.undoList.push(inputValue);
+      this.undoList.push({ status: 'div', value: inputValue });
     },
     handleItemDelete (ind) {
       this.undoList.splice(ind, 1);
+    },
+    changeStatus (ind) {
+      const newList = [];
+      this.undoList.forEach((item, itemIndex) => {
+        if (itemIndex === ind) {
+          newList.push({ status: 'input', value: item.value });
+        } else {
+          newList.push(item);
+        }
+      });
+      this.undoList = newList;
+    },
+    resetStatus () {
+      const newList = [];
+      this.undoList.forEach((item) => {
+        newList.push({ status: 'div', value: item.value });
+      });
+      this.undoList = newList;
+    },
+    changeItemValue ({ value, index }) {
+      this.undoList[index].value = value;
     }
   }
 };
