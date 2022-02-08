@@ -97,7 +97,6 @@ describe('UndoList 组件', () => {
       index: 1,
     });
     expect(wrapper.emitted().change).toBeTruthy();
-    console.log('888:', wrapper.emitted().change)
     expect(wrapper.emitted().change[0][0]).toEqual({
       value: '2', // 数据类型应为输入框原因改变了！！！
       index: 1,

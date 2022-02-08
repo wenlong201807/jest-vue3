@@ -38,7 +38,7 @@ describe('Header 组件', () => {
 
   it('输入框输入回车时，有内容时，向外触发事件, 同时清空输入框内容', () => {
     const wrapper = shallowMount(Header);
-    const input = findTestWrapper(wrapper, 'input');
+    const input = findTestWrapper(wrapper, 'input').at(0);
     input.setValue('has content');
     input.trigger('keyup.enter');
     expect(wrapper.emitted().add).toBeTruthy();
