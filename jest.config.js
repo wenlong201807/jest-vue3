@@ -7,6 +7,8 @@ module.exports = {
     '^.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest'// es6语法转成es5语法
   },
+  // https://v1.test-utils.vuejs.org/zh/installation/#%E7%94%A8-jest-%E6%B5%8B%E8%AF%95%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6
+  collectCoverageFrom: ['**/*.vue', '!**/node_modules/**'],
   transformIngorePatterns: [
     '/node_modules/'
   ],
