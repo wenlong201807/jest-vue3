@@ -40,7 +40,7 @@ export default {
 .header-content {
   width: 100%;
   margin: 0 auto;
-  color: #333;
+  color: #fff;
   font-size: 16px;
   text-align: center;
 }

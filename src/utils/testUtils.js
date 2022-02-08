@@ -1,4 +1,4 @@
 
 export const findTestWrapper = (wrapper, tag) => {
-  return wrapper.find(`[data-test="${tag}"]`);
+  return wrapper.findAll(`[data-test="${tag}"]`);
 };

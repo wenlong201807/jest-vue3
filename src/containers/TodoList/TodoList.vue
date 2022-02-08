@@ -1,20 +1,18 @@
 <template>
   <div>
     <CHeader @add="addTodoItem" />
-    <hr />
-    <ul>
-      <li v-for="item of undoList" :key="item">{{ item }}</li>
-    </ul>
+    <UndoList :list="undoList" @delete="handleItemDelete" />
   </div>
 </template>
 
 <script>
 import CHeader from '../TodoList/components/Header';
+import UndoList from '../TodoList/components/UndoList';
 export default {
   name: 'TodoList',
   props: {},
   components: {
-    CHeader
+    CHeader, UndoList
   },
   data () {
     return {
@@ -24,6 +22,9 @@ export default {
   methods: {
     addTodoItem (inputValue) {
       this.undoList.push(inputValue);
+    },
+    handleItemDelete (ind) {
+      this.undoList.splice(ind, 1);
     }
   }
 };
