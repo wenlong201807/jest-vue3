@@ -24,7 +24,6 @@ export default {
   methods: {
     addTodoItem (inputValue) {
       this.undoList.push(inputValue);
-      console.info(this.undoList);
     }
   }
 };
