@@ -7,7 +7,7 @@
     <ul class="list">
       <li
         data-test="list-item"
-        data-test0="item"
+        data-test-pass="item"
         v-for="(item, index) in list"
         :key="index"
         class="item"

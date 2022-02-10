@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import CHeader from '../TodoList/components/Header';
 import UndoList from '../TodoList/components/UndoList';
 export default {
@@ -24,6 +25,34 @@ export default {
     return {
       undoList: []
     };
+  },
+  mounted () {
+    /**
+     * 前端只关注正确的数据怎么处理
+     * 错误监测即可，后端处理
+     * {
+     *   success: true,
+     *   data: [
+     *     { statue: 'div', value: 'wenlong' },
+     *     { statue: 'div', value: 'wenlong3' },
+     *   ]
+     * }
+    */
+    // axios.get('/getUndoList.json').then((res) => {
+    //   this.undoList = res.data;
+    //   console.log(666);
+    // }).catch(e => {
+    //   console.log('错误');
+    // });
+
+    setTimeout(() => {
+      axios.get('/getUndoList.json').then((res) => {
+        this.undoList = res.data;
+        console.log(666);
+      }).catch(e => {
+        console.log('错误');
+      });
+    }, 4000);
   },
   methods: {
     addTodoItem (inputValue) {

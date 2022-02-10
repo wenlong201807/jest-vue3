@@ -6,7 +6,7 @@
       class="header-input"
       placeholder="TodoItem"
       data-test="header-input"
-      data-test0="input"
+      data-test-pass="input"
       :value="inputValue"
       @input="(e) => changeInputValue(e.target.value)"
       @keyup.enter="addTodoItem" />
