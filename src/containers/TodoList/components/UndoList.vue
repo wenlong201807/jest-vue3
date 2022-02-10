@@ -6,7 +6,8 @@
     </div>
     <ul class="list">
       <li
-        data-test="item"
+        data-test="list-item"
+        data-test0="item"
         v-for="(item, index) in list"
         :key="index"
         class="item"

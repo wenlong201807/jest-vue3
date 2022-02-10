@@ -5,29 +5,41 @@
     <input
       class="header-input"
       placeholder="TodoItem"
-      data-test="input"
-      v-model="inputValue"
+      data-test="header-input"
+      data-test0="input"
+      :value="inputValue"
+      @input="(e) => changeInputValue(e.target.value)"
       @keyup.enter="addTodoItem" />
   </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
 export default {
   name: 'C-Header',
   // props: {},
-  data () {
-    return {
-      inputValue: ''
-    };
+  // data () {
+  //   return {
+  //     inputValue: ''
+  //   };
+  // },
+  computed: {
+    ...mapState({
+      inputValue: state => state.inputValue
+    })
   },
   methods: {
     addTodoItem () {
       if (this.inputValue) {
         this.$emit('add', this.inputValue);
-        this.inputValue = '';
+        // this.inputValue = '';
+        this.changeInputValue('');
       }
-    }
+    },
+    ...mapMutations({
+      changeInputValue: 'changeInputValue'
+    })
   }
 };
 </script>
